@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebPro Learning Hub</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    #header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      position: relative;
+    }
+    
+    #header h1 {
+      font-size: 24px;
+      text-align: center;
+      position: relative;
+    }
+    
+    #header a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+    }
+
+    #login-btn,
+    #register-btn {
+      position: absolute;
+      top: 20px;
+    }
+    
+    #login-btn {
+      right: 120px;
+    }
+    
+    #register-btn {
+      right: 10px;
+    }
+    
+    #login-btn,
+    #register-btn {
+      padding: 8px 12px;
+      background-color: #656060;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    #login-btn:hover,
+    #register-btn:hover {
+      background-color: #555;
+    }
+    
+    #left-panel {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    
+    #left-panel h2 {
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      font-size: 18px;
+    }
+    
+    #left-panel ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    #left-panel li {
+      margin-bottom: 10px;
+    }
+    
+    #left-panel a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      transition: background-color 0.3s;
+    }
+    
+    #left-panel a:hover {
+      background-color: #ccc;
+    }
+    
+    #content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    function showContent(contentType) {
+      var contentElement = document.getElementById('content');
+      var content = '';
+      
+      if (contentType === 'home') {
+        content = '<h2>Home</h2><h3>Enhance your web development skills and stay up-to-date with the latest technologies at WebPro Learning Hub. Our platform offers a wide range of courses, tutorials, and resources to help you become a proficient web developer.</p><p>Whether you are a beginner starting your journey or an experienced developer looking to expand your knowledge, we have something for everyone. Our expert instructors and comprehensive learning materials ensure that you receive quality education and practical hands-on experience.</h3>';
+      } else if (contentType === 'contact') {
+        content = '<h2>Contact</h2><h3>For any queries contact us at <a href="mailto:webpro.gmail.com">webpro.gmail.com</a></h3>';
+      } else if (contentType === 'info') {
+        content = '<h2>Our Courses</h2><h3><ul><li>Introduction to HTML5</li><li>Introduction to CSS3</li><li>Introduction to Javascript</li></ul></h3>';
+      } else if (contentType === 'guide') {
+        content = '<h2>Guide to Enroll</h2><h3><ul><li>Login into our website</li><li>Choose any course</li><li>Click on the enroll button</li></ul></h3>';
+      }
+      contentElement.innerHTML = content;
+    }
+  </script>
+
+  
+</head>
+<body>
+  <div id="header">
+    <h1> WebPro Learning Hub </h1> 
+    <a id="login-btn" href="#">Login</a>
+    <a id="register-btn" href="#">Register</a>
+  </div> 
+  <div id="left-panel">
+    <h2>MENU</h2>
+    <ul>
+      <li><a href="#" onclick="showContent('home')">Home</a></li>
+      <li><a href="#" onclick="showContent('info')">Course Information</a></li>
+      <li><a href="#" onclick="showContent('guide')">Guide to Enroll</a></li>
+      <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+    </ul>
+  </div> 
+  <div id="content">
+      <h2>Welcome to WebPro Learning Hub!</h2>
+      <p>Unlock Your Web Development Potential </p>
+  </div>
+</body>
+</html>
